@@ -130,6 +130,55 @@
         </div>
     </div>
 
+    <div class="posts">
+        <div class="bg-post">
+            <button type="button" class="postbutton" onclick="window.location.href = './html/postslist.html';">
+                All Posts
+            </button>
+            <button type="button" class="postbutton" data-toggle="modal" data-target="#createPost"
+                id="create-post-button">
+                Create Post
+            </button>
+        </div>
+
+        <div class="post-buttons">
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="createPost">
+                <div class="modal-dialog  modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"
+                                style="color:grey;font-family: 'Roboto', sans-serif;font-size: larger;">
+                                Pen
+                                Your Post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" id="title"
+                                        placeholder="Enter title of your post" style="background-color : 	#DCDCDC ;"
+                                        required>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="content">Contents</label>
+                                    <textarea rows="10" cols="50" class="form-control" id="content"
+                                        placeholder="Enter the contents of your post"
+                                        style="background-color :	#DCDCDC;" required></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success" style="width: 100px;">Create</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
 
