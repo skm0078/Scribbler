@@ -9,3 +9,4 @@ function openPost(author, heading, content) {
     )}&content=${encodeURIComponent(content.innerText)}`;
     window.location.href = url;
 }
+
