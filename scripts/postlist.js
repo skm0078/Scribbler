@@ -10,3 +10,11 @@ function openPost(author, heading, content) {
     window.location.href = url;
 }
 
+var req = new XMLHttpRequest();
+
+req.onload = function() {
+    document.getElementById('header').innerHTML = this.responseText;
+}
+
+req.open("get", "header.html", true);
+req.send();

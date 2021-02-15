@@ -89,3 +89,12 @@ function addComment(comment) {
                 $(document).scrollTop($(document).height());
         }
 }
+
+var req = new XMLHttpRequest();
+
+req.onload = function() {
+    document.getElementById('header').innerHTML = this.responseText;
+}
+
+req.open("get", "header.html", true);
+req.send();
