@@ -88,7 +88,7 @@ function addComment(comment) {
                 $(document).scrollTop($(document).height());
         }
 }
-
+// For loading the header
 var req = new XMLHttpRequest();
 
 req.onload = function() {

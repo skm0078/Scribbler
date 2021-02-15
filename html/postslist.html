@@ -3,7 +3,8 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
 
@@ -15,9 +16,10 @@
     <!-- Bootstrap -->
 
 
-   
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
     <title>Scribbler</title>
@@ -47,7 +49,8 @@
             <div class="custom-card-body">
                 <div>
                     <div class="card-body-heading">
-                        <span class="card-body-heading-content formatter" id="heading1">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</span>
+                        <span class="card-body-heading-content formatter" id="heading1">‘let’ me be a ‘const’(ant), not
+                            a ‘var’(iable)!</span>
                         <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo1">
                             <!-- TODO: Include Font Awesome icon for delete icon here -->
                             <i class="fa fa-trash fa-lg"></i>
@@ -55,8 +58,54 @@
                     </div>
 
                 </div>
-                <div class="post-text formatter" id="content1"><p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius. You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside a module run? Before executing the code written inside a module. Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function. Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa. The five parameters — exports, require, module, filename, dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module. Let's revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified. So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this article. module The module parameter (rather a keyword in a module in Node) refers to the object representing the current module. exports is a key of the module object, the corresponding value of which is an object. The default value of module.exports object is {} (empty object). You can check this by logging the value of module keyword inside any module. Let's check what is the value of module parameter inside the circle module. Notice that there is a console.log(module); statement at the end of the code in the file given above. When you see the output, it will log the module object, which has a key named exports and the value corresponding to this key is {} (an empty object). Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting something is quite easy. You just need to add it to the module.exports object. There are three ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.</p>
-</div>
+                <div class="post-text formatter" id="content1">
+                    <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file
+                        containing some code and this file is named xyz.js, then this file is treated as a module in
+                        Node, and you can say that you've created a module named xyz. Let's take an example to
+                        understand this better. You have a file named circle.js which consists of the logic for
+                        calculating the area & the circumference of a circle of a given radius. You can call circle.js
+                        file a module named circle. You might be wondering why is there a need to have multiple modules?
+                        You could have just written all the code in a single module. Well, it is very important to write
+                        modular code. By modular, I mean to say that your code should be independent and should be
+                        loosely coupled. Imagine that there's a large application and you have all your code written in
+                        just one place, just one file. Too messy, right? How does the code written inside a module run?
+                        Before executing the code written inside a module. Node takes the entire code and encloses it
+                        within a function wrapper. The syntax of this function wrapper is: The entire code written
+                        inside a module is private to the module, unless explicitly stated (exported) otherwise. This is
+                        the most significant advantage of having modules in Node.js. Even if you define a global
+                        variable in a module using var, let or const keywords, the variables are scoped locally to the
+                        module rather than being scoped globally. This happens because each module has a function
+                        wrapper of its own and the code written inside one function is local to that function and cannot
+                        be accessed outside this function. Imagine that there are two modules — A and B. The code
+                        written inside the module A is enclosed within the function wrapper corresponding to the module
+                        A. Similar thing happens with the code written inside the module B. Because the code pertaining
+                        to both the modules is enclosed within different functions, these functions will not be able to
+                        access the code of each other. (Remember each function in JavaScript has its own local scope?)
+                        This is the reason why module A cannot access the code written inside module B and vice-versa.
+                        The five parameters — exports, require, module, filename, dirname are available inside each
+                        module in Node. Though these parameters are global to the code within a module yet they are
+                        local to the module (because of the function wrapper as explained above). These parameters
+                        provide valuable information related to a module. Let's revisit the circle module, which you
+                        looked at earlier. There are three constructs defined in this module — a constant variable PI, a
+                        function named calculateArea and another function named calculateCircumference. An important
+                        point to keep in mind is that all these constructs are private to the circle module by default.
+                        It means that you cannot use these constructs in any other module unless explicitly specified.
+                        So, the question that arises now is how do you specify something in a module that can be used by
+                        some other module? This is when the module & require parameters of the function wrapper are
+                        helpful. Let's discuss these two parameters in this article. module The module parameter (rather
+                        a keyword in a module in Node) refers to the object representing the current module. exports is
+                        a key of the module object, the corresponding value of which is an object. The default value of
+                        module.exports object is {} (empty object). You can check this by logging the value of module
+                        keyword inside any module. Let's check what is the value of module parameter inside the circle
+                        module. Notice that there is a console.log(module); statement at the end of the code in the file
+                        given above. When you see the output, it will log the module object, which has a key named
+                        exports and the value corresponding to this key is {} (an empty object). Now, what does the
+                        module.exports object do? Well, it is used for defining stuff that can be exported by a module.
+                        Whatever is exported from a module can, in turn, be made available to other modules. Exporting
+                        something is quite easy. You just need to add it to the module.exports object. There are three
+                        ways to add something to the module.exports object to be exported. Let's discuss these methods
+                        one by one.</p>
+                </div>
 
                 <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 <span class="ellipsis" onclick="openPost(author1,heading1,content1)">
@@ -95,12 +144,15 @@
         <div class="card-new" id="card2">
 
             <div class="side-square-wrapper">
-                <span class="side-square-wrapper-content" id="author2"><p>Colby Fayock</p></span>
+                <span class="side-square-wrapper-content" id="author2">
+                    <p>Colby Fayock</p>
+                </span>
             </div>
             <div class="custom-card-body">
                 <div>
                     <div class="card-body-heading">
-                        <span class="card-body-heading-content formatter" id="heading2">What is linting and how can it save you
+                        <span class="card-body-heading-content formatter" id="heading2">What is linting and how can it
+                            save you
                             time?</span>
                         <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo2">
                             <!-- TODO: Include Font Awesome icon for delete icon here -->
@@ -109,8 +161,55 @@
                     </div>
 
                 </div>
-                <div class="post-text formatter" id="content2"><p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius. You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside a module run? Before executing the code written inside a module. Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function. Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa. The five parameters — exports, require, module, filename, dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module. Let's revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified. So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this article. module The module parameter (rather a keyword in a module in Node) refers to the object representing the current module. exports is a key of the module object, the corresponding value of which is an object. The default value of module.exports object is {} (empty object). You can check this by logging the value of module keyword inside any module. Let's check what is the value of module parameter inside the circle module. Notice that there is a console.log(module); statement at the end of the code in the file given above. When you see the output, it will log the module object, which has a key named exports and the value corresponding to this key is {} (an empty object). Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting something is quite easy. You just need to add it to the module.exports object. There are three ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.</p>
-</div>
+                <div class="post-text formatter" id="content2">
+                    <p>One of the biggest challenges in software development is time. It’s something we can’t easily get
+                        more of, but linting can help us make the most out of the time we have.Node.js treats each
+                        JavaScript file as a separate module. For instance, if you have a file containing some code and
+                        this file is named xyz.js, then this file is treated as a module in Node, and you can say that
+                        you've created a module named xyz. Let's take an example to understand this better. You have a
+                        file named circle.js which consists of the logic for calculating the area & the circumference of
+                        a circle of a given radius. You can call circle.js file a module named circle. You might be
+                        wondering why is there a need to have multiple modules? You could have just written all the code
+                        in a single module. Well, it is very important to write modular code. By modular, I mean to say
+                        that your code should be independent and should be loosely coupled. Imagine that there's a large
+                        application and you have all your code written in just one place, just one file. Too messy,
+                        right? How does the code written inside a module run? Before executing the code written inside a
+                        module. Node takes the entire code and encloses it within a function wrapper. The syntax of this
+                        function wrapper is: The entire code written inside a module is private to the module, unless
+                        explicitly stated (exported) otherwise. This is the most significant advantage of having modules
+                        in Node.js. Even if you define a global variable in a module using var, let or const keywords,
+                        the variables are scoped locally to the module rather than being scoped globally. This happens
+                        because each module has a function wrapper of its own and the code written inside one function
+                        is local to that function and cannot be accessed outside this function. Imagine that there are
+                        two modules — A and B. The code written inside the module A is enclosed within the function
+                        wrapper corresponding to the module A. Similar thing happens with the code written inside the
+                        module B. Because the code pertaining to both the modules is enclosed within different
+                        functions, these functions will not be able to access the code of each other. (Remember each
+                        function in JavaScript has its own local scope?) This is the reason why module A cannot access
+                        the code written inside module B and vice-versa. The five parameters — exports, require, module,
+                        filename, dirname are available inside each module in Node. Though these parameters are global
+                        to the code within a module yet they are local to the module (because of the function wrapper as
+                        explained above). These parameters provide valuable information related to a module. Let's
+                        revisit the circle module, which you looked at earlier. There are three constructs defined in
+                        this module — a constant variable PI, a function named calculateArea and another function named
+                        calculateCircumference. An important point to keep in mind is that all these constructs are
+                        private to the circle module by default. It means that you cannot use these constructs in any
+                        other module unless explicitly specified. So, the question that arises now is how do you specify
+                        something in a module that can be used by some other module? This is when the module & require
+                        parameters of the function wrapper are helpful. Let's discuss these two parameters in this
+                        article. module The module parameter (rather a keyword in a module in Node) refers to the object
+                        representing the current module. exports is a key of the module object, the corresponding value
+                        of which is an object. The default value of module.exports object is {} (empty object). You can
+                        check this by logging the value of module keyword inside any module. Let's check what is the
+                        value of module parameter inside the circle module. Notice that there is a console.log(module);
+                        statement at the end of the code in the file given above. When you see the output, it will log
+                        the module object, which has a key named exports and the value corresponding to this key is {}
+                        (an empty object). Now, what does the module.exports object do? Well, it is used for defining
+                        stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made
+                        available to other modules. Exporting something is quite easy. You just need to add it to the
+                        module.exports object. There are three ways to add something to the module.exports object to be
+                        exported. Let's discuss these methods one by one.</p>
+                </div>
 
 
                 <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
@@ -157,7 +256,8 @@
             <div class="custom-card-body">
                 <div>
                     <div class="card-body-heading">
-                        <span class="card-body-heading-content formatter" id="heading3">How to Get More Views on Your Tech
+                        <span class="card-body-heading-content formatter" id="heading3">How to Get More Views on Your
+                            Tech
                             Blog</span>
                         <span class="trash-button" data-toggle="modal" data-target="#modalConfirmYesNo3">
                             <!-- TODO: Include Font Awesome icon for delete icon here -->
@@ -166,8 +266,56 @@
                     </div>
 
                 </div>
-                <div class="post-text formatter" id="content3"><p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius. You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside a module run? Before executing the code written inside a module. Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function. Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa. The five parameters — exports, require, module, filename, dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module. Let's revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified. So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this article. module The module parameter (rather a keyword in a module in Node) refers to the object representing the current module. exports is a key of the module object, the corresponding value of which is an object. The default value of module.exports object is {} (empty object). You can check this by logging the value of module keyword inside any module. Let's check what is the value of module parameter inside the circle module. Notice that there is a console.log(module); statement at the end of the code in the file given above. When you see the output, it will log the module object, which has a key named exports and the value corresponding to this key is {} (an empty object). Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting something is quite easy. You just need to add it to the module.exports object. There are three ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.</p>
-</div>
+                <div class="post-text formatter" id="content3">
+                    <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a
+                        blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a
+                        recognizable name in the industry.Node.js treats each JavaScript file as a separate module. For
+                        instance, if you have a file containing some code and this file is named xyz.js, then this file
+                        is treated as a module in Node, and you can say that you've created a module named xyz. Let's
+                        take an example to understand this better. You have a file named circle.js which consists of the
+                        logic for calculating the area & the circumference of a circle of a given radius. You can call
+                        circle.js file a module named circle. You might be wondering why is there a need to have
+                        multiple modules? You could have just written all the code in a single module. Well, it is very
+                        important to write modular code. By modular, I mean to say that your code should be independent
+                        and should be loosely coupled. Imagine that there's a large application and you have all your
+                        code written in just one place, just one file. Too messy, right? How does the code written
+                        inside a module run? Before executing the code written inside a module. Node takes the entire
+                        code and encloses it within a function wrapper. The syntax of this function wrapper is: The
+                        entire code written inside a module is private to the module, unless explicitly stated
+                        (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even
+                        if you define a global variable in a module using var, let or const keywords, the variables are
+                        scoped locally to the module rather than being scoped globally. This happens because each module
+                        has a function wrapper of its own and the code written inside one function is local to that
+                        function and cannot be accessed outside this function. Imagine that there are two modules — A
+                        and B. The code written inside the module A is enclosed within the function wrapper
+                        corresponding to the module A. Similar thing happens with the code written inside the module B.
+                        Because the code pertaining to both the modules is enclosed within different functions, these
+                        functions will not be able to access the code of each other. (Remember each function in
+                        JavaScript has its own local scope?) This is the reason why module A cannot access the code
+                        written inside module B and vice-versa. The five parameters — exports, require, module,
+                        filename, dirname are available inside each module in Node. Though these parameters are global
+                        to the code within a module yet they are local to the module (because of the function wrapper as
+                        explained above). These parameters provide valuable information related to a module. Let's
+                        revisit the circle module, which you looked at earlier. There are three constructs defined in
+                        this module — a constant variable PI, a function named calculateArea and another function named
+                        calculateCircumference. An important point to keep in mind is that all these constructs are
+                        private to the circle module by default. It means that you cannot use these constructs in any
+                        other module unless explicitly specified. So, the question that arises now is how do you specify
+                        something in a module that can be used by some other module? This is when the module & require
+                        parameters of the function wrapper are helpful. Let's discuss these two parameters in this
+                        article. module The module parameter (rather a keyword in a module in Node) refers to the object
+                        representing the current module. exports is a key of the module object, the corresponding value
+                        of which is an object. The default value of module.exports object is {} (empty object). You can
+                        check this by logging the value of module keyword inside any module. Let's check what is the
+                        value of module parameter inside the circle module. Notice that there is a console.log(module);
+                        statement at the end of the code in the file given above. When you see the output, it will log
+                        the module object, which has a key named exports and the value corresponding to this key is {}
+                        (an empty object). Now, what does the module.exports object do? Well, it is used for defining
+                        stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made
+                        available to other modules. Exporting something is quite easy. You just need to add it to the
+                        module.exports object. There are three ways to add something to the module.exports object to be
+                        exported. Let's discuss these methods one by one.</p>
+                </div>
 
                 <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 <span class="ellipsis" onclick="openPost(author3,heading3,content3)">
@@ -222,10 +370,55 @@
                     </div>
 
                 </div>
-                <div class="post-text formatter" id="content4">When code is not describable using words, most people have to do
+                <div class="post-text formatter" id="content4">When code is not describable using words, most people
+                    have to do
                     some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of
                     getting the mapping wrong. Different people will map to different words, which
-                    leads to confusion when discussing the code.Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius. You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside a module run? Before executing the code written inside a module. Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function. Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa. The five parameters — exports, require, module, filename, dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module. Let's revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified. So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this article. module The module parameter (rather a keyword in a module in Node) refers to the object representing the current module. exports is a key of the module object, the corresponding value of which is an object. The default value of module.exports object is {} (empty object). You can check this by logging the value of module keyword inside any module. Let's check what is the value of module parameter inside the circle module. Notice that there is a console.log(module); statement at the end of the code in the file given above. When you see the output, it will log the module object, which has a key named exports and the value corresponding to this key is {} (an empty object). Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting something is quite easy. You just need to add it to the module.exports object. There are three ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.</div>
+                    leads to confusion when discussing the code.Node.js treats each JavaScript file as a separate
+                    module. For instance, if you have a file containing some code and this file is named xyz.js, then
+                    this file is treated as a module in Node, and you can say that you've created a module named xyz.
+                    Let's take an example to understand this better. You have a file named circle.js which consists of
+                    the logic for calculating the area & the circumference of a circle of a given radius. You can call
+                    circle.js file a module named circle. You might be wondering why is there a need to have multiple
+                    modules? You could have just written all the code in a single module. Well, it is very important to
+                    write modular code. By modular, I mean to say that your code should be independent and should be
+                    loosely coupled. Imagine that there's a large application and you have all your code written in just
+                    one place, just one file. Too messy, right? How does the code written inside a module run? Before
+                    executing the code written inside a module. Node takes the entire code and encloses it within a
+                    function wrapper. The syntax of this function wrapper is: The entire code written inside a module is
+                    private to the module, unless explicitly stated (exported) otherwise. This is the most significant
+                    advantage of having modules in Node.js. Even if you define a global variable in a module using var,
+                    let or const keywords, the variables are scoped locally to the module rather than being scoped
+                    globally. This happens because each module has a function wrapper of its own and the code written
+                    inside one function is local to that function and cannot be accessed outside this function. Imagine
+                    that there are two modules — A and B. The code written inside the module A is enclosed within the
+                    function wrapper corresponding to the module A. Similar thing happens with the code written inside
+                    the module B. Because the code pertaining to both the modules is enclosed within different
+                    functions, these functions will not be able to access the code of each other. (Remember each
+                    function in JavaScript has its own local scope?) This is the reason why module A cannot access the
+                    code written inside module B and vice-versa. The five parameters — exports, require, module,
+                    filename, dirname are available inside each module in Node. Though these parameters are global to
+                    the code within a module yet they are local to the module (because of the function wrapper as
+                    explained above). These parameters provide valuable information related to a module. Let's revisit
+                    the circle module, which you looked at earlier. There are three constructs defined in this module —
+                    a constant variable PI, a function named calculateArea and another function named
+                    calculateCircumference. An important point to keep in mind is that all these constructs are private
+                    to the circle module by default. It means that you cannot use these constructs in any other module
+                    unless explicitly specified. So, the question that arises now is how do you specify something in a
+                    module that can be used by some other module? This is when the module & require parameters of the
+                    function wrapper are helpful. Let's discuss these two parameters in this article. module The module
+                    parameter (rather a keyword in a module in Node) refers to the object representing the current
+                    module. exports is a key of the module object, the corresponding value of which is an object. The
+                    default value of module.exports object is {} (empty object). You can check this by logging the value
+                    of module keyword inside any module. Let's check what is the value of module parameter inside the
+                    circle module. Notice that there is a console.log(module); statement at the end of the code in the
+                    file given above. When you see the output, it will log the module object, which has a key named
+                    exports and the value corresponding to this key is {} (an empty object). Now, what does the
+                    module.exports object do? Well, it is used for defining stuff that can be exported by a module.
+                    Whatever is exported from a module can, in turn, be made available to other modules. Exporting
+                    something is quite easy. You just need to add it to the module.exports object. There are three ways
+                    to add something to the module.exports object to be exported. Let's discuss these methods one by
+                    one.</div>
 
                 <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 <div class="ellipsis" onclick="openPost(author4,heading4,content4)">
@@ -280,10 +473,54 @@
                     </div>
 
                 </div>
-                <div class="post-text formatter" id="content5">Node.js treats each JavaScript file as a separate module. For
+                <div class="post-text formatter" id="content5">Node.js treats each JavaScript file as a separate module.
+                    For
                     instance, if you have a file containing some code and this file is named xyz.js, then this file is
                     treated as a module in Node, and you can say that you’ve created a module
-                    named xyz.Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius. You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside a module run? Before executing the code written inside a module. Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The entire code written inside a module is private to the module, unless explicitly stated (exported) otherwise. This is the most significant advantage of having modules in Node.js. Even if you define a global variable in a module using var, let or const keywords, the variables are scoped locally to the module rather than being scoped globally. This happens because each module has a function wrapper of its own and the code written inside one function is local to that function and cannot be accessed outside this function. Imagine that there are two modules — A and B. The code written inside the module A is enclosed within the function wrapper corresponding to the module A. Similar thing happens with the code written inside the module B. Because the code pertaining to both the modules is enclosed within different functions, these functions will not be able to access the code of each other. (Remember each function in JavaScript has its own local scope?) This is the reason why module A cannot access the code written inside module B and vice-versa. The five parameters — exports, require, module, filename, dirname are available inside each module in Node. Though these parameters are global to the code within a module yet they are local to the module (because of the function wrapper as explained above). These parameters provide valuable information related to a module. Let's revisit the circle module, which you looked at earlier. There are three constructs defined in this module — a constant variable PI, a function named calculateArea and another function named calculateCircumference. An important point to keep in mind is that all these constructs are private to the circle module by default. It means that you cannot use these constructs in any other module unless explicitly specified. So, the question that arises now is how do you specify something in a module that can be used by some other module? This is when the module & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this article. module The module parameter (rather a keyword in a module in Node) refers to the object representing the current module. exports is a key of the module object, the corresponding value of which is an object. The default value of module.exports object is {} (empty object). You can check this by logging the value of module keyword inside any module. Let's check what is the value of module parameter inside the circle module. Notice that there is a console.log(module); statement at the end of the code in the file given above. When you see the output, it will log the module object, which has a key named exports and the value corresponding to this key is {} (an empty object). Now, what does the module.exports object do? Well, it is used for defining stuff that can be exported by a module. Whatever is exported from a module can, in turn, be made available to other modules. Exporting something is quite easy. You just need to add it to the module.exports object. There are three ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.</div>
+                    named xyz.Node.js treats each JavaScript file as a separate module. For instance, if you have a file
+                    containing some code and this file is named xyz.js, then this file is treated as a module in Node,
+                    and you can say that you've created a module named xyz. Let's take an example to understand this
+                    better. You have a file named circle.js which consists of the logic for calculating the area & the
+                    circumference of a circle of a given radius. You can call circle.js file a module named circle. You
+                    might be wondering why is there a need to have multiple modules? You could have just written all the
+                    code in a single module. Well, it is very important to write modular code. By modular, I mean to say
+                    that your code should be independent and should be loosely coupled. Imagine that there's a large
+                    application and you have all your code written in just one place, just one file. Too messy, right?
+                    How does the code written inside a module run? Before executing the code written inside a module.
+                    Node takes the entire code and encloses it within a function wrapper. The syntax of this function
+                    wrapper is: The entire code written inside a module is private to the module, unless explicitly
+                    stated (exported) otherwise. This is the most significant advantage of having modules in Node.js.
+                    Even if you define a global variable in a module using var, let or const keywords, the variables are
+                    scoped locally to the module rather than being scoped globally. This happens because each module has
+                    a function wrapper of its own and the code written inside one function is local to that function and
+                    cannot be accessed outside this function. Imagine that there are two modules — A and B. The code
+                    written inside the module A is enclosed within the function wrapper corresponding to the module A.
+                    Similar thing happens with the code written inside the module B. Because the code pertaining to both
+                    the modules is enclosed within different functions, these functions will not be able to access the
+                    code of each other. (Remember each function in JavaScript has its own local scope?) This is the
+                    reason why module A cannot access the code written inside module B and vice-versa. The five
+                    parameters — exports, require, module, filename, dirname are available inside each module in Node.
+                    Though these parameters are global to the code within a module yet they are local to the module
+                    (because of the function wrapper as explained above). These parameters provide valuable information
+                    related to a module. Let's revisit the circle module, which you looked at earlier. There are three
+                    constructs defined in this module — a constant variable PI, a function named calculateArea and
+                    another function named calculateCircumference. An important point to keep in mind is that all these
+                    constructs are private to the circle module by default. It means that you cannot use these
+                    constructs in any other module unless explicitly specified. So, the question that arises now is how
+                    do you specify something in a module that can be used by some other module? This is when the module
+                    & require parameters of the function wrapper are helpful. Let's discuss these two parameters in this
+                    article. module The module parameter (rather a keyword in a module in Node) refers to the object
+                    representing the current module. exports is a key of the module object, the corresponding value of
+                    which is an object. The default value of module.exports object is {} (empty object). You can check
+                    this by logging the value of module keyword inside any module. Let's check what is the value of
+                    module parameter inside the circle module. Notice that there is a console.log(module); statement at
+                    the end of the code in the file given above. When you see the output, it will log the module object,
+                    which has a key named exports and the value corresponding to this key is {} (an empty object). Now,
+                    what does the module.exports object do? Well, it is used for defining stuff that can be exported by
+                    a module. Whatever is exported from a module can, in turn, be made available to other modules.
+                    Exporting something is quite easy. You just need to add it to the module.exports object. There are
+                    three ways to add something to the module.exports object to be exported. Let's discuss these methods
+                    one by one.</div>
 
                 <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 <span class="ellipsis" onclick="openPost(author5,heading5,content5)">
@@ -323,10 +560,12 @@
 
     <!-- list of all posts ends here -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script src="../scripts/postlist.js"></script>
 
 </body>

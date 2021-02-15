@@ -3,25 +3,24 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <!-- TODO: Include Google Fonts file here -->
-    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Roboto|Ubuntu+Mono&display=swap" rel="stylesheet" />
 
-
-    <link rel="import" href="../html/header.html">
-    <link rel="stylesheet" href="../styles/post.css">
-    <link rel="stylesheet" href="../styles/commons.css">
+    <link rel="import" href="../html/header.html" />
+    <link rel="stylesheet" href="../styles/post.css" />
+    <link rel="stylesheet" href="../styles/commons.css" />
 
     <!-- Bootstrap -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
     <title>Scribbler</title>
-
 </head>
 
 <body>
-
     <!-- TODO: Include code for header here -->
 
     <div id="header"></div>
@@ -31,41 +30,41 @@
         <div class="author">
             <div class="author-name"></div>
             <div>
-                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
-                        class="fa fa-edit" style="padding-left: 5px;"></i></button>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">
+                    Edit<i class="fa fa-edit" style="padding-left: 5px"></i>
+                </button>
             </div>
         </div>
 
+        <div class="post-content" id="edit-contenttext" contenteditable="true"></div>
 
-        <div class="post-content" id="edit-contenttext" contenteditable="true">
-        </div>
-
-        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
-                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()">
+            <i class="fa fa-thumbs-up"></i><span id="likeButton">Like</span>
+        </button>
         <div id="showCount">Be the first one to like this</div>
 
         <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
-        <div><button id="comment-button" type="button" class="btn btn-danger"
-                onclick="addComment(comment)">Comment</button></div>
+        <div>
+            <button id="comment-button" type="button" class="btn btn-danger" onclick="addComment(comment)">
+                Comment
+            </button>
+        </div>
         <div id="allCommentsHeading">All Comments</div>
         <div class="comment-container">
-            <div id="comments">
-            </div>
+            <div id="comments"></div>
         </div>
-
     </div>
 
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script src="../scripts/postlist.js"></script>
 
     <script src="../scripts/post.js"></script>
-
 </body>
 
 </html>

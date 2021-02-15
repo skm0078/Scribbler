@@ -5,14 +5,17 @@
     margin: auto;
     text-decoration: none;
     margin: 10px 10px 0px 10px;    
-    }
+}
+
 .sub-heading {
     font-family: 'Ubuntu Mono';
     margin-left: 10px;
 }
+
 .modal-signin-container{
     border: 10px solid white;
 }
+
 .signinupbutton{
     width: 120px;
     padding: 10px;
